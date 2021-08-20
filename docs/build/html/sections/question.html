@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Question/ &mdash; MathProgram 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Classes/" href="classes.html" />
+    <link rel="prev" title="Implementing Questions" href="implement.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> MathProgram
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../folders.html">Folder structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="implement.html">Implementing Questions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Question/</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#question-py">question.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nums-py">nums.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-py">image.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Classes/</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MathProgram</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Question/</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/sections/question.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="question">
+<span id="questionreference"></span><h1>Question/<a class="headerlink" href="#question" title="Permalink to this headline">¶</a></h1>
+<p>Question contains the implementation of the <a class="reference internal" href="#question.QuestionGenerator" title="question.QuestionGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">question.QuestionGenerator</span></code></a> class.</p>
+<div class="section" id="question-py">
+<span id="questiongeneratorreference"></span><h2>question.py<a class="headerlink" href="#question-py" title="Permalink to this headline">¶</a></h2>
+<p>This file contains the implementation of the <code class="docutils literal notranslate"><span class="pre">QuestionGenerator</span></code> class.</p>
+<dl class="py class">
+<dt id="question.QuestionGenerator">
+<em class="property">class </em><code class="sig-prename descclassname">question.</code><code class="sig-name descname">QuestionGenerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prompts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">img</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">solver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">constants</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">permute</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">pass_img</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">directions</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">sub_topic</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/question.html#QuestionGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#question.QuestionGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that represents a generator object that produces <code class="xref py py-class docutils literal notranslate"><span class="pre">Question</span></code> objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompts</strong> (<em>str</em><em> or </em><em>list</em><em>, </em><em>optional</em>) – A list of (or one) parseable strings that represents the question.</p></li>
+<li><p><strong>img</strong> (<a class="reference internal" href="#image.Image" title="image.Image"><em>Image</em></a><em>, </em><em>optional</em>) – An image included in the prompt of a generated question.</p></li>
+<li><p><strong>solver</strong> (<em>function</em>) – A function applied to the sympy expressions in the prompt that returns an answer.
+The returned answer can either be sympy/string object, an Image object, or both (in the form of a tuple).</p></li>
+<li><p><strong>constants</strong> (<em>list</em>) – A list of <cite>Relation</cite> instances for each variable to substitute.</p></li>
+<li><p><strong>permute</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean Flag that determines if the expression/equation should be algebraically
+shuffled (currently only supported over addition)</p></li>
+<li><p><strong>pass_img</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean Flag that determines if img expressions will be passed to the solver. Defaults to True.</p></li>
+<li><p><strong>directions</strong> (<em>str</em><em>, </em><em>optional</em>) – A latex string that will be shown to the student as instructions for this question.</p></li>
+<li><p><strong>sub_topic</strong> (<em>str</em><em>, </em><em>optional</em>) – A plain-text string that can be used to categorize questions (outsource this functionality at scale).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="nums-py">
+<span id="numsreference"></span><h2>nums.py<a class="headerlink" href="#nums-py" title="Permalink to this headline">¶</a></h2>
+<p>This file contains the implementations of the <a class="reference internal" href="#nums.Relation" title="nums.Relation"><code class="xref py py-class docutils literal notranslate"><span class="pre">nums.Relation</span></code></a> and <a class="reference internal" href="#nums.Interval" title="nums.Interval"><code class="xref py py-class docutils literal notranslate"><span class="pre">nums.Interval</span></code></a> classes.</p>
+<dl class="py class">
+<dt id="nums.Relation">
+<em class="property">class </em><code class="sig-prename descclassname">nums.</code><code class="sig-name descname">Relation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">var</span></em>, <em class="sig-param"><span class="n">default_interval</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">expr</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nums.html#Relation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nums.Relation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that defines a relationship between a given symbol and other symbols in a system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>var</strong> (<em>sympy.core.symbol.Symbol</em><em> or </em><em>str</em>) – A sympy object representing the symbol that has a relation.</p></li>
+<li><p><strong>default_interval</strong> (<a class="reference internal" href="#nums.Interval" title="nums.Interval"><code class="xref py py-class docutils literal notranslate"><span class="pre">Interval</span></code></a>) – An <code class="docutils literal notranslate"><span class="pre">Interval</span></code> instance to default to if the variable passed is
+determined ‘free’ under the system of relations.</p></li>
+<li><p><strong>expr</strong> (<em>str</em>) – A keyword argument that takes a mathematical expression
+that relates a variable to others in the system.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="nums.Interval">
+<em class="property">class </em><code class="sig-prename descclassname">nums.</code><code class="sig-name descname">Interval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">vals</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/nums.html#Interval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nums.Interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that represents numeric intervals in different domains.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain</strong> (<em>str</em>) – A string representing the parent set of the specified interval. Accepted values: [“Integer”, “Real”, “Natural”, “Rational”, “Finite”]</p></li>
+<li><p><strong>*vals</strong> – Intervals for numbers generated</p></li>
+<li><p><strong>**default</strong> – A function that takes no arguments and returns a sympy number</p></li>
+<li><p><strong>**zero</strong> – determines if 0 is included in the given interval. Defaults to True.</p></li>
+<li><p><strong>**zero</strong> – bool, optional</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>The examples below demonstrate how to represent mathematical intervals using the <code class="xref py py-class docutils literal notranslate"><span class="pre">Interval</span></code> class.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This interval will contain integers between -10 and 10 (inclusive).</span>
+<span class="n">inter</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="s2">&quot;Integer&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># You can use the zero keyword to prevent zero from being contained in the interval.</span>
+<span class="n">inter</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="s2">&quot;Integer&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">zero</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># This interval will contain arbitrary floating point numbers between 0 and 1.</span>
+<span class="n">inter</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="s2">&quot;Real&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Both of these intervals will contain integers between 0 and 100 (inclusive).</span>
+<span class="n">inter</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="s2">&quot;Natural&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">inter</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="s2">&quot;Natural&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># This interval contains rational numbers.</span>
+<span class="n">inter</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="s2">&quot;Rational&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># This interval only contains the numbers 5, 17, and 32.</span>
+<span class="n">inter</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="s2">&quot;Finite&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">32</span><span class="p">])</span>
+
+<span class="c1"># You can use the Finite keyword to make an interval of special angles.</span>
+<span class="n">angles</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="s2">&quot;Finite&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">sympy</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sympy</span><span class="o">.</span><span class="n">pi</span><span class="p">])</span>
+
+<span class="c1"># You can also specify the units of an interval (the only option at the moment is degrees).</span>
+<span class="n">angles</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="s2">&quot;Real&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;degrees&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="image-py">
+<span id="imagereference"></span><h2>image.py<a class="headerlink" href="#image-py" title="Permalink to this headline">¶</a></h2>
+<p>This file contains the implementations of the <a class="reference internal" href="#image.Image" title="image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">image.Image</span></code></a> and <a class="reference internal" href="#image.Graph" title="image.Graph"><code class="xref py py-class docutils literal notranslate"><span class="pre">image.Graph</span></code></a> classes.</p>
+<dl class="py class">
+<dt id="image.Image">
+<em class="property">class </em><code class="sig-prename descclassname">image.</code><code class="sig-name descname">Image</code><a class="reference internal" href="../_modules/image.html#Image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#image.Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that can represent an arbitrary image (graphs, tables, or even shapes).
+Instance variables spelled with a leading underscore are not in the JSON representation.</p>
+<dl class="py method">
+<dt id="image.Image.complete_specified_img">
+<code class="sig-name descname">complete_specified_img</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/image.html#Image.complete_specified_img"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#image.Image.complete_specified_img" title="Permalink to this definition">¶</a></dt>
+<dd><p>Completes an image where the placeholder values are already specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The completed image, which is ready for rendering.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#image.Image" title="image.Image">Image</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="image.Image.complete_template">
+<code class="sig-name descname">complete_template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">preprocess_info</span></em>, <em class="sig-param"><span class="n">substitutions</span></em>, <em class="sig-param"><span class="n">pass_img</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/image.html#Image.complete_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#image.Image.complete_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a completed image after using substitutions and returns arguments to be passed to the solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>preprocess_info</strong> (<em>dict</em>) – A return value of preprocess</p></li>
+<li><p><strong>substitutions</strong> – </p></li>
+<li><p><strong>pass_img</strong> (<em>bool</em>) – Determines whether we want to pass additional arguments to the solver.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>a tuple of Image, list of sympy objects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="image.Image.json">
+<code class="sig-name descname">json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/image.html#Image.json"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#image.Image.json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a json object that contains all the information associated with the Image.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="image.Image.preprocess">
+<code class="sig-name descname">preprocess</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/image.html#Image.preprocess"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#image.Image.preprocess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an image with its expressions preprocessed, and additional info 
+needed in the complete_image method.
+Every Image child implements preprocess and complete_template in a way specific to the 
+implementation of the class. The complete_template method relies on the return values of preprocess.
+See the child documentation for the what preprocess actions are taken.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple of Image and dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="image.Image.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/image.html#Image.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#image.Image.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Every image object should implement this method if attributes other than it’s expressions
+must be updated when a question is generated.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="image.Graph">
+<em class="property">class </em><code class="sig-prename descclassname">image.</code><code class="sig-name descname">Graph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expressions</span></em>, <em class="sig-param"><span class="n">focus</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">show</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/image.html#Graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#image.Graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#image.Image" title="image.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">image.Image</span></code></a></p>
+<p>A class that represents plots of equations, piecewise equations, and points.
+Supports both Cartesian and Polar systems.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>expressions</strong> – </p></li>
+<li><p><strong>focus</strong> (<em>dict</em>) – A dictionary with three keys: ‘center’, ‘hdisp’, ‘vdisp’. The graph image will
+be centered at the tuple stored at focus[‘center’], with horizontal displacement focus[‘hdisp’]
+and vertical displacement focus[‘vdisp’].</p></li>
+<li><p><strong>mode</strong> – </p></li>
+<li><p><strong>height</strong> – </p></li>
+<li><p><strong>width</strong> – </p></li>
+<li><p><strong>preserveAxisNumbers</strong> – </p></li>
+<li><p><strong>mathBounds</strong> – </p></li>
+<li><p><strong>polarMode</strong> – </p></li>
+<li><p><strong>polarNumbers</strong> – </p></li>
+<li><p><strong>xAxisStep</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classes.html" class="btn btn-neutral float-right" title="Classes/" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="implement.html" class="btn btn-neutral float-left" title="Implementing Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Nima Rahmanian, Daniel Etaat
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
