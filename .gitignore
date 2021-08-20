@@ -1,0 +1,6 @@
+build/
+dist/
+mathpc/
+
+__pycache__
+*.pyc

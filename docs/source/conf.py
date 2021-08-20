@@ -12,12 +12,12 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath("../../../"))
-sys.path.insert(0, os.path.abspath("../../server/Question/"))
-sys.path.insert(0, os.path.abspath("../../server/Question/helpers/"))
-sys.path.insert(0, os.path.abspath("../../server/Classes/"))
-sys.path.insert(0, os.path.abspath("../../server/DatabaseConnection/"))
-sys.path.insert(0, os.path.abspath("../../../MathProgram/server/"))
+
+base = "../.."
+sys.path.insert(0, os.path.abspath(base))
+sys.path.insert(0, os.path.abspath(f"{base}/src/Question/"))
+sys.path.insert(0, os.path.abspath(f"{base}/src/Question/helpers/"))
+sys.path.insert(0, os.path.abspath(f"{base}/src/utils/"))
 
 # -- Project information -----------------------------------------------------
 

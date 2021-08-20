@@ -1,6 +1,0 @@
-Algorithms_Verification
-Data_Control
-Displays
-PDF
-PNG
-Tabs
