@@ -3,9 +3,9 @@ Contains a number of helper functions for dealing with Image objects.
 """
 
 import re, sympy
-from csympy.printing.latex import latex as clatex
+from .csympy.printing.latex import latex as clatex
 from .. import image
-import exprh
+from . import exprh
 
 latex_params = {
     "order": "none",

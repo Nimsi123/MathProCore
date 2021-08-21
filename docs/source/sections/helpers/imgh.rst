@@ -4,6 +4,6 @@
 imgh.py
 ********
 
-.. automodule:: imgh
+.. automodule:: src.mathprocore.Question.helpers.imgh
     :members:
     :show-inheritance:

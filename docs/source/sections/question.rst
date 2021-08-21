@@ -13,7 +13,7 @@ question.py
 
 This file contains the implementation of the ``QuestionGenerator`` class.
 
-.. autoclass:: question.QuestionGenerator
+.. autoclass:: src.mathprocore.Question.question.QuestionGenerator
     :show-inheritance:
 
 .. _NumsReference:
@@ -23,10 +23,10 @@ nums.py
 
 This file contains the implementations of the :class:`nums.Relation` and :class:`nums.Interval` classes.
 
-.. autoclass:: nums.Relation
+.. autoclass:: src.mathprocore.Question.nums.Relation
     :show-inheritance:
 
-.. autoclass:: nums.Interval
+.. autoclass:: src.mathprocore.Question.nums.Interval
     :show-inheritance:
 
 The examples below demonstrate how to represent mathematical intervals using the :class:`Interval` class.
@@ -65,9 +65,9 @@ image.py
 
 This file contains the implementations of the :class:`image.Image` and :class:`image.Graph` classes.
 
-.. autoclass:: image.Image
+.. autoclass:: src.mathprocore.Question.image.Image
     :show-inheritance:
     :members:
 
-.. autoclass:: image.Graph
+.. autoclass:: src.mathprocore.Question.image.Graph
     :show-inheritance:

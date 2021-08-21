@@ -4,8 +4,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-  name='MathProCore',
-  version="0.0.1",
+  name='mathprocore',
+  version="0.0.2",
   author='Nima Rahmanian',
   author_email='nimarahmanian8@gmail.com',
   description='Use MathPro to generate unlimited math practice problems from question templates!',

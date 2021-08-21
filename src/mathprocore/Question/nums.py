@@ -1,5 +1,5 @@
 import sympy, random
-from Question.matrix import Matrix
+from .matrix import Matrix
 
 class Interval:
     """A class that represents numeric intervals in different domains. 

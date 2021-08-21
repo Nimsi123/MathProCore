@@ -4,3 +4,5 @@ mathpc/
 
 __pycache__
 *.pyc
+
+*.egg-info

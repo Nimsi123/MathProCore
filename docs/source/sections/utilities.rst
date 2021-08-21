@@ -11,6 +11,6 @@ utils.py
 
 The utility functions are all stored in this file.
 
-.. automodule:: utils
+.. automodule:: src.mathprocore.utils
     :members:
     :show-inheritance:

@@ -2,10 +2,10 @@ import copy
 import json
 import random
 import sympy
-from nums import *
-from image import *
-from helpers import exprh, imgh
-from helpers.csympy.printing.latex import latex as clatex
+from .nums import *
+from .image import *
+from .helpers import exprh, imgh
+from .helpers.csympy.printing.latex import latex as clatex
 
 
 # for the later parameter transformations=transforms in sympify
