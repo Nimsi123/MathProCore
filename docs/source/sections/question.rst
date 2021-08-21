@@ -1,17 +1,15 @@
 .. _QuestionReference:
 
-*********
-Question/
-*********
+Question
+========
 
-Question contains the implementation of the :class:`question.QuestionGenerator` class.
+Question contains the implementation of the :class:`question.QuestionGenerator` class, 
+along with accessory classes like Graph, Interval, etc.
 
 .. _QuestionGeneratorReference:
 
 question.py
-********************
-
-This file contains the implementation of the ``QuestionGenerator`` class.
+***********
 
 .. autoclass:: src.mathprocore.Question.question.QuestionGenerator
     :show-inheritance:
@@ -19,9 +17,7 @@ This file contains the implementation of the ``QuestionGenerator`` class.
 .. _NumsReference:
 
 nums.py
-********************
-
-This file contains the implementations of the :class:`nums.Relation` and :class:`nums.Interval` classes.
+*******
 
 .. autoclass:: src.mathprocore.Question.nums.Relation
     :show-inheritance:
@@ -61,13 +57,31 @@ The examples below demonstrate how to represent mathematical intervals using the
 .. _ImageReference:
 
 image.py
-********************
-
-This file contains the implementations of the :class:`image.Image` and :class:`image.Graph` classes.
+********
 
 .. autoclass:: src.mathprocore.Question.image.Image
     :show-inheritance:
     :members:
 
 .. autoclass:: src.mathprocore.Question.image.Graph
+    :show-inheritance:
+
+
+helpers
+*******
+
+.. _ExprhReference:
+
+exprh.py
+^^^^^^^^
+.. automodule:: src.mathprocore.Question.helpers.exprh
+    :members:
+    :show-inheritance:
+
+.. _ImghReference:
+
+imgh.py
+^^^^^^^
+.. automodule:: src.mathprocore.Question.helpers.imgh
+    :members:
     :show-inheritance:

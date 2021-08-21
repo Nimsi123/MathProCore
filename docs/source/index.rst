@@ -11,9 +11,6 @@ MathProgram is a powerful python library for generating math questions.
 
   folders
   installation
-  sections/helpers/exprh.rst
-  sections/helpers/imgh.rst
-  sections/classes
   sections/implement
   sections/question
-  sections/utilities
+  sections/utils
