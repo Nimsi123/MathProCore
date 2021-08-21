@@ -2,8 +2,8 @@ import sympy, json, copy
 #from Question.auto_fitter import auto_fit
 #from Question.helpers import imgh
 
-from Question.auto_fitter import auto_fit
-from Question.helpers import imgh
+from auto_fitter import auto_fit
+from helpers import imgh
 
 class Image:
     """A class that can represent an arbitrary image (graphs, tables, or even shapes).

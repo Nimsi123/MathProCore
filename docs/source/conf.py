@@ -15,9 +15,9 @@ import sys
 
 base = "../.."
 sys.path.insert(0, os.path.abspath(base))
-sys.path.insert(0, os.path.abspath(f"{base}/src/Question/"))
-sys.path.insert(0, os.path.abspath(f"{base}/src/Question/helpers/"))
-sys.path.insert(0, os.path.abspath(f"{base}/src/utils/"))
+sys.path.insert(0, os.path.abspath(f"{base}/src/Question"))
+sys.path.insert(0, os.path.abspath(f"{base}/src/Question/helpers"))
+sys.path.insert(0, os.path.abspath(f"{base}/src/utils"))
 
 # -- Project information -----------------------------------------------------
 

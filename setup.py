@@ -18,7 +18,7 @@ setuptools.setup(
       "Operating System :: OS Independent",
   ],
   install_requires=[
-      "sympy >= 1.8",
+      "sympy == 1.7.1",
       "numpy >= 1.21.1"
   ],
   python_requires=">=3.6",

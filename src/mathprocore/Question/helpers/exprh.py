@@ -4,7 +4,7 @@ Contains a number of helper functions for sympy expressions represented as strin
 
 import re
 import sympy
-from Question.helpers.csympy.parsing.sympy_parser import parse_expr as cparse_expr
+from csympy.parsing.sympy_parser import parse_expr as cparse_expr
 
 transforms = (
     sympy.parsing.sympy_parser.standard_transformations

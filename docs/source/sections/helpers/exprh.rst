@@ -4,6 +4,6 @@
 exprh.py
 ********
 
-.. automodule:: exprh
+.. automodule:: src.Question.helpers.exprh
     :members:
     :show-inheritance:

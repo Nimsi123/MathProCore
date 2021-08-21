@@ -2,7 +2,7 @@ from sys import platform
 import json, webbrowser
 from importlib import resources
 from pathlib import Path
-from utils.driver_utils import group_q_gens, make_questions
+from driver_utils import group_q_gens, make_questions
 
 def worksheet_latex_output(q_gens, num=5):
 	"""Generates a worksheet with problems from q-gens in questions. Opens the worksheet in a web browser.
