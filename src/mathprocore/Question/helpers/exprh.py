@@ -38,13 +38,14 @@ def subs(sympy_obj, substitutions):
     # multiplication
     if type(sympy_obj) == sympy.core.mul.Mul:
         if len(args) == 2 and type(args[1]) == sympy.core.power.Pow and args[1].args[1] == -1: # division
-            string1 = str(args[0])
-            string2 = str(args[1].args[0])
-            if isinstance(args[0], sympy.Symbol):
-                string1 = f"Symbol('{string1}')"
-            if isinstance(args[1].args[0], sympy.Symbol):
-                string2 = f"Symbol('{string2}')"
-            return cparse_expr(string1 + " / " + string2, evaluate=False)
+            def to_string(arg):
+                string = str(arg)
+                if isinstance(arg, sympy.Symbol):
+                    return f"Symbol('{string}')"
+                if isinstance(arg, sympy.Add):
+                    return f"({string})"
+                return string
+            return cparse_expr(to_string(args[0]) + " / " + to_string(args[1].args[0]), evaluate=False)
         args = [ arg for arg in args if arg != 1 ] # simplify multplication by one
     try:
         return type(sympy_obj)(*args, evaluate=False)
