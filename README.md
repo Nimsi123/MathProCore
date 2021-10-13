@@ -6,12 +6,6 @@ MathPro is a powerful python library for generating math questions.
 
 To be a large contributor to the growing wealth of resources for online education during the COVID-19 pandemic.
 
-## Goals
-
-To be updated.
-
-![alt text](StackDiagram.png)
-
 ## Notes
 
 1) The documentation is available at *MathProgram/docs.html*. You will find the installation process here.
